@@ -7,6 +7,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-es2015": "^6.24.1",
     "markdown-it": "^12.0.4",
+    "npm-update-all": "^1.0.1",
     "prosemirror-example-setup": "github:writefreely/prosemirror-example-setup",
     "prosemirror-keymap": "^1.1.4",
     "prosemirror-markdown": "github:writefreely/prosemirror-markdown",
@@ -23,8 +24,8 @@
     "prettier": "^2.2.1"
   },
   "scripts": {
-    "develop": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "develop": "webpack --openssl-legacy-provider --mode development --watch",
+    "build": "webpack --openssl-legacy-provider --mode production"
   },
   "keywords": [],
   "author": "",

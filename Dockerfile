@@ -1,5 +1,6 @@
 # Build image
-FROM golang:1.15-alpine as build
+FROM golang:1-alpine as build
+ENV NODE_OPTIONS=--openssl-legacy-provider
 
 RUN apk add --update nodejs npm make g++ git
 RUN npm install -g less less-plugin-clean-css
@@ -8,8 +9,6 @@ RUN mkdir -p /go/src/github.com/writefreely/writefreely
 WORKDIR /go/src/github.com/writefreely/writefreely
 
 COPY . .
-
-ENV GO111MODULE=on
 
 RUN make build \
   && make ui
